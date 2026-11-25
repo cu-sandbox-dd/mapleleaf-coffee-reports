@@ -26,7 +26,7 @@ def gross_sales(orders):
 
 def net_sales(orders):
     """Sales after discounts. Refunded orders should not count."""
-    return round(sum(line_total(o) for o in orders), 2)
+    return round(sum(line_total(o) for o in completed_orders(orders)), 2)
 
 
 def completed_orders(orders):
